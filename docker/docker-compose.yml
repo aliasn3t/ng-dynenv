@@ -1,0 +1,10 @@
+nginx:
+  image: front_app-nginx:dynamic
+  container_name: front_app-nginx
+  restart: always
+  ports:
+    - "80"
+  volumes_from:
+    - metadata
+  environment:
+    - ANG_BASE_URL={{ app_base_url }}

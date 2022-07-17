@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  // Конфиг для dev
+  // ...
+  // ...
+
+  production: false,
+
+  baseURL: window["env"]["baseURL"] || '/dev/app/',
+  apiURL: window["env"]["apiURL"] || '/dev/app-gate',
+  keycloakDomain: window["env"]["keycloakDomain"] || 'dev.keycloak.domain',
+  keycloakUrlPrefix: window["env"]["keycloakUrlPrefix"] || '',
+  appIdRealm: window["env"]["appIdRealm"] || 'dev',
+  appIdClientId: window["env"]["appIdClientId"] || 'dev-app-v2',
 };
 
 /*
